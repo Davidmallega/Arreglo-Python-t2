@@ -1,0 +1,186 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #333333d8;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+header .logo {
+    width: 250px;  /* Ajusta el tamaño del logo */
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;  /* Centrar el logo y agregar un margen inferior */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Asegúrate de que esta clase no afecta a otros elementos */
+.centrar-mensaje {
+    text-align: center;
+    padding: 20px;
+}
+
+.container-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Color blanco con 80% de opacidad */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+}
+
+.container-table {
+    max-width: 800px;
+    
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.inventory-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.inventory-table th, .inventory-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.inventory-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.inventory-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.inventory-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    align-self: center;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+.btn-update {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.btn-update:hover {
+    background-color: #218838;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+}
+
+/* H2 dentro del div con la clase .centrar-mensaje */
+.centrar-mensaje h2, .centrar-mensaje p {
+    text-align: center;
+}
+
+.flash-messages {
+    margin: 20px 0;
+}
+
+.alert {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.welcome-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con 80% de opacidad */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    text-align: center;
+}
+
+.welcome-container h2 {
+    margin-bottom: 10px;
+}
+
+.welcome-container p {
+    margin: 0;
+}

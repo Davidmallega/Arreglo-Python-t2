@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario de Productos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='background.css') }}">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='STORE.png') }}" alt="Logo de Diego Store" class="logo">
+        <h1></h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index.index') }}">Inicio</a></li>
+                <li><a href="{{ url_for('agregar.agregar') }}">Agregar Producto</a></li>
+                <li><a href="{{ url_for('mostrar.mostrar') }}">Mostrar Productos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

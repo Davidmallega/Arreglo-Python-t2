@@ -1,0 +1,27 @@
+flask_inventory/
+├── app.py
+├── config.py
+├── models/
+│   └── __init__.py
+├── routes/
+│   ├── __init__.py
+│   ├── index.py
+│   ├── agregar.py
+│   ├── mostrar.py
+│   ├── actualizar.py
+│   ├── eliminar.py
+│   ├── generar_pdf.py
+├── templates/
+│   ├── base.html
+│   ├── index.html
+│   ├── agregar.html
+│   ├── actualizar.html
+│   ├── eliminar.html
+│   ├── mostrar.html
+├── static/
+│   ├── images/
+│   │   └── background.jpg
+│   ├── style.css
+│   ├── background.css
+│   ├── table.css
+└── ...

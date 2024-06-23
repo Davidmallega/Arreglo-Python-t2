@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='table.css') }}">
+{% endblock %}
+{% block content %}
+<div class="container-table">
+    <h2>Lista de Productos</h2>
+    <form method="GET" action="{{ url_for('mostrar.mostrar') }}">
+        <label for="marca">Filtrar por marca:</label>
+        <select name="marca" id="marca">
+            <option value="">Todas</option>
+            {% for marca in marcas %}
+                <option value="{{ marca }}" {% if marca == marca_seleccionada %}selected{% endif %}>{{ marca }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Filtrar</button>
+    </form>
+    <table class="inventory-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Talla</th>
+                <th>Color</th>
+                <th>Material</th>
+                <th>Unidades</th>
+                <th>Precio</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for producto in productos %}
+            <tr>
+                <td>{{ producto[0] }}</td>
+                <td>{{ producto[1] }}</td>
+                <td>{{ producto[2] }}</td>
+                <td>{{ producto[3] }}</td>
+                <td>{{ producto[4] }}</td>
+                <td>{{ producto[5] }}</td>
+                <td>{{ producto[6] }}</td>
+                <td>{{ producto[7] }}</td>
+                <td>
+                    <a href="{{ url_for('actualizar.actualizar', id=producto[0]) }}" class="btn btn-update">Actualizar</a>
+                    <a href="{{ url_for('eliminar.eliminar', id=producto[0]) }}" class="btn btn-delete">Eliminar</a>
+                </td>
+            </tr>
+            {% endfor %}
+            <tr>
+                <td colspan="7" style="text-align: right;"><strong>Total</strong></td>
+                <td colspan="2"><strong>{{ total_precio }}</strong></td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="{{ url_for('generar_pdf.generar_pdf') }}" class="btn btn-pdf">Generar PDF</a>
+</div>
+{% endblock %}
+
+
+
+
+
+
+
